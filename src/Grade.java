@@ -11,7 +11,7 @@ class Grade {
         this.date = date;
     }
 
-    public void print() {
+    public void printGrade() {
         System.out.println("Предмет: " + subject);
         System.out.println("Оценка: " + score);
         System.out.println("Дата: " + date);

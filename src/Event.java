@@ -19,7 +19,7 @@ class Event {
         eventMembers.add(student);
     }
 
-    public void print() {
+    public void printEvent() {
         System.out.println("Название мероприятия: " + eventName);
         System.out.println("Дата: " + date);
         System.out.println("Место проведения: " + location);

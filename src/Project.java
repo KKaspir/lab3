@@ -7,9 +7,9 @@ class Project {
     private String description;
     private String startDate;
     private String endDate;
-    private List<Student> teamMembers;
+    private ArrayList<Student> teamMembers;
 
-    public Project(String projectName, String description, String startDate, String endDate, List<Student> teamMembers) {
+    public Project(String projectName, String description, String startDate, String endDate, ArrayList<Student> teamMembers) {
         this.projectName = projectName;
         this.description = description;
         this.startDate = startDate;
@@ -18,10 +18,10 @@ class Project {
     }
 
     public void addTeamMember(Student student) {
-        teamMembers.add(student);
+        this.teamMembers.add(student);
     }
 
-    public void print() {
+    public void printProject() {
         System.out.println("Название проекта: " + projectName);
         System.out.println("Описание: " + description);
         System.out.println("Дата начала: " + startDate);
@@ -44,7 +44,7 @@ class Project {
         System.out.print("Введите дату окончания: ");
         String endDate = scanner.next();
 
-        List<Student> teamMembers = new ArrayList<>();
+        ArrayList<Student> teamMembers = new ArrayList<>();
         char addMember;
         do {
             Student student = Student.inputFromConsole();

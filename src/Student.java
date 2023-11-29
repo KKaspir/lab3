@@ -3,12 +3,12 @@ import java.util.List;
 import java.util.Scanner;
 
 class Student {
-    private String firstName;
-    private String lastName;
-    private String dateOfBirth;
-    private String studentID;
-    private String email;
-    private List<Grade> grades;
+    public String firstName;
+    public String lastName;
+    public String dateOfBirth;
+    public String studentID;
+    public String email;
+    public List<Grade> grades;
 
     public Student(String firstName, String lastName, String dateOfBirth, String studentID, String email, List<Grade> grades) {
         this.firstName = firstName;
@@ -30,7 +30,7 @@ class Student {
         return totalScore / grades.size();
     }
 
-    public void print() {
+    public void printStudent() {
         System.out.println("Имя: " + firstName);
         System.out.println("Фамилия: " + lastName);
         System.out.println("Дата рождения: " + dateOfBirth);
@@ -39,7 +39,7 @@ class Student {
 
         System.out.println("\nОценки:");
         for (Grade grade : grades) {
-            grade.print();
+            grade.printGrade();
             System.out.println();
         }
     }

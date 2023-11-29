@@ -21,7 +21,7 @@ class Course {
         events.add(event);
     }
 
-    public void print() {
+    public void printCourse() {
         System.out.println("Название курса: " + courseName);
         System.out.println("Дата начала: " + startDate);
         System.out.println("Дата окончания: " + endDate);
