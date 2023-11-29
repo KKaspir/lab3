@@ -19,10 +19,12 @@ public class Main {
         Student student3 = new Student("Третий", "Студент", "03.03.2003", "33333", "student3@example.com", List.of());
         project.addTeamMember(student3);
 
-        Course course = new Course("Программирование", "01.01.2001", "10.10.2001", "Троицкий", List.of());
-        Event event = new Event("Конференция", "20.10.2023", "Конференц-зал", List.of(student));
+        ArrayList<Event> courseEvents = new ArrayList<>();
+
+        Course course = new Course("Программирование", "01.01.2001", "10.10.2001", "Троицкий", courseEvents);
+        Event event = new Event("Конференция", "20.10.2023", "Конференц-зал", teamMembers);
         course.addEvent(event);
-        Event event2 = new Event("Семинар", "25.10.2023", "Аудитория 101", List.of(student3));
+        Event event2 = new Event("Семинар", "25.10.2023", "Аудитория 101", teamMembers);
         course.addEvent(event2);
 
         System.out.println("Вызов printStudent\n");

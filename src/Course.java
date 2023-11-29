@@ -7,9 +7,9 @@ class Course {
     private String startDate;
     private String endDate;
     private String instructor;
-    private List<Event> events;
+    private ArrayList<Event> events;
 
-    public Course(String courseName, String startDate, String endDate, String instructor, List<Event> events) {
+    public Course(String courseName, String startDate, String endDate, String instructor, ArrayList<Event> events) {
         this.courseName = courseName;
         this.startDate = startDate;
         this.endDate = endDate;
@@ -18,7 +18,7 @@ class Course {
     }
 
     public void addEvent(Event event) {
-        events.add(event);
+        this.events.add(event);
     }
 
     public void printCourse() {
@@ -44,7 +44,7 @@ class Course {
         System.out.print("Введите имя предподавателя: ");
         String instructor = scanner.next();
 
-        List<Event> events = new ArrayList<>();
+        ArrayList<Event> events = new ArrayList<>();
         char addEvent;
         do {
             Event event = Event.inputFromConsole();

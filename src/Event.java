@@ -6,9 +6,9 @@ class Event {
     private String eventName;
     private String date;
     private String location;
-    private List<Student> eventMembers;
+    private ArrayList<Student> eventMembers;
 
-    public Event(String eventName, String date, String location, List<Student> eventMembers) {
+    public Event(String eventName, String date, String location, ArrayList<Student> eventMembers) {
         this.eventName = eventName;
         this.date = date;
         this.location = location;
@@ -39,7 +39,7 @@ class Event {
         System.out.print("Введите место проведения мероприятия: ");
         String location = scanner.next();
 
-        List<Student> eventMembers = new ArrayList<>();
+        ArrayList<Student> eventMembers = new ArrayList<>();
         char addParticipant;
         do {
             Student student = Student.inputFromConsole();
