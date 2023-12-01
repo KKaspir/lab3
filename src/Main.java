@@ -16,8 +16,9 @@ public class Main {
         teamMembers.add(student);
 
         Project project = new Project("name", "description", "1", "1", teamMembers);
-        Student student3 = new Student("Третий", "Студент", "03.03.2003", "33333", "student3@example.com", List.of());
-        project.addTeamMember(student3);
+        Student student2 = new Student("Второй", "Студент", "03.03.2003", "33333", "student3@example.com", studentGrades);
+        Student student3 = new Student("Третий", "Студент", "03.03.2003", "33333", "student3@example.com", studentGrades);
+        project.addTeamMember(student2);
 
         ArrayList<Event> courseEvents = new ArrayList<>();
 
@@ -25,6 +26,7 @@ public class Main {
         Event event = new Event("Конференция", "20.10.2023", "Конференц-зал", teamMembers);
         course.addEvent(event);
         Event event2 = new Event("Семинар", "25.10.2023", "Аудитория 101", teamMembers);
+        Event event3 = new Event("Классный час", "25.10.2023", "Аудитория 101", teamMembers);
         course.addEvent(event2);
 
         System.out.println("Вызов printStudent\n");
@@ -49,7 +51,7 @@ public class Main {
         System.out.println();
 
         System.out.println("Вызов printCourse с новым event\n");
-        course.addEvent(event2);
+        course.addEvent(event3);
         course.printCourse();
         System.out.println();
 
