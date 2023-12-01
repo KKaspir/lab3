@@ -45,12 +45,12 @@ public class Main {
         System.out.println();
 
         System.out.println("Вызов printCourse\n");
-//        course.print();
+        course.printCourse();
         System.out.println();
 
         System.out.println("Вызов printCourse с новым event\n");
         course.addEvent(event2);
-//        course.print();
+        course.printCourse();
         System.out.println();
 
         System.out.println("Вызов printEvent\n");
